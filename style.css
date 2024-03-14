@@ -8,8 +8,9 @@
 }
 
 body {
-    background: #222831;
-    color: #76ABAE;
+    background: #252B48;
+    color: #727880;
+    background-image: url(i);
 }
 
 header {
@@ -42,31 +43,99 @@ header {
 
 .navbar a:hover,
 .navbar a.active {
-    color: #76ABAE;
+    color: #461959;
 }
 
 .home {
     display: flex;
-    align-items: center;
     height: 100vh;
     align-items: center;
+    justify-content: space-between;
 }
 
 .home-content {
-    width: 45%;
-    margin-left: 10%;
+    width: 40%;
+    margin-right: 10%;
+    padding: 50px;
 }
 
 .home-content h1{
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: white;
+    color: #7A316F;
 }
 
 .home-content h3{
-font-size: 30px;
-font-weight: 500px;
-margin-bottom: 20px;
-color: white;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.home-img{
+    height: 400px;
+    margin-left: 10%;
+    padding-right: 250px;
+}
+
+.home-content .btn-box{
+    justify-content: space-between;
+    display: flex;
+    width: 350px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.btn-box a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #7A316F;
+    color: white;
+    border: 2px solid #7A316F;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.btn-box a:hover{
+    background:#252B48;
+    color: white;
+}
+
+.home-sci {
+    position: absolute;
+    margin-top: 30px;
+    width: 150px;
+    justify-content: space-between;
+    display: flex;
+    z-index: 1000; /* Adjust z-index to ensure visibility */
+    margin: 10px ;
+    border-radius: 50%;
+    
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #7A316F;
+    border-radius: 50%;
+    color: #7A316F;
+    text-decoration: none;
+    font-size: 24px; /* Increased icon size */
+    transition: transform 0.2s, border-color 0.2s; /* Added transition for hover effect */
+}
+
+.home-sci a:hover {
+    transform: scale(1.2); /* Scale up by 10% on hover */
+    border-style:solid;/* Change border color on hover */
 }
