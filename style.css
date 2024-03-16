@@ -23,7 +23,9 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* Adjust z-index to ensure visibility */
-}
+    transition: background 0.3s ease; /* Simplified transition */
+    background-color: #252B48;
+}   
 
 .logo {
     font-size: 25px;
@@ -114,7 +116,7 @@ header {
     width: 150px;
     justify-content: space-between;
     display: flex;
-    z-index: 1000; /* Adjust z-index to ensure visibility */
+    z-index: 1; /* Adjust z-index to ensure visibility */
     margin: 10px ;
     border-radius: 50%;
     
@@ -138,4 +140,38 @@ header {
 .home-sci a:hover {
     transform: scale(1.2); /* Scale up by 10% on hover */
     border-style:solid;/* Change border color on hover */
+}
+
+/* about */
+
+.about{
+    padding: 80px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.about-img{
+    width: 90%;
+    margin-left: 3%;
+}
+
+.about-content{
+    width: 90%;
+    margin-right: 5%;
+    padding: 5%;
+}
+
+.about-content h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #7A316F;
+    padding-left: 30%;
+    margin: bottom 10px ;
+}
+
+.label {
+    color: #7A316F; /* Color for labels */
+}
+
+.value {
+    color:aliceblue; /* Color for values */
 }
