@@ -7,6 +7,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.section {
+    height: 100vh; /* Set each section to take up the full viewport height */
+    overflow-y: scroll; /* Add vertical scroll if content overflows */
+}
+
 body {
     background: #252B48;
     color: #727880;
@@ -142,7 +147,7 @@ header {
     border-style:solid;/* Change border color on hover */
 }
 
-/* about */
+/*===================== about============================= */
 
 .about{
     padding: 80px 0px;
@@ -176,36 +181,176 @@ header {
     color:aliceblue; /* Color for values */
 }
 
-
-/* project */
+/*================================== PROJECt======================T */
 
 .project{
-    padding: 100px 0px;
+    padding: 40px 0px;
     display: flex;
     justify-content: space-between;
 }
 
-.container{
-   
-   display: grid;
-   gap: var(--size-3);
-   grid-auto-flow: column;
-   grid-auto-columns: 21%;
-
-   overflow-x:auto;
-   overscroll-behavior-inline: contain;
+.project-container{
+    margin-top: 75PX;
+    display: grid;
+    width: 100%;
+    justify-content: space-between;
+    gap: var(--size-3);
+    grid-auto-flow: column;
+    grid-auto-columns: 45%;
+    overflow-x: auto;
 
 }
 
-
-.projectimg{
-    border-radius: 10px;
-  
-    padding: 10px
+.project-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 600px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow);
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: transform 0.5s ease; /* Added transition for smooth animation */
 }
+
+.project-box > i,
+.project-box > h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #7A316F;
+    margin-bottom: 25px;
+}
+
+.project-box label {
+    justify-self: center;
+    align-self: center;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.project-box::after {
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: #461959;
+    width: 100%;
+    height: 100%;
+    z-index: 0.1;
+    transition: transform 0.5s ease; /* Added transition for smooth animation */
+}
+
+.project-box p {
+    color: white;
+    z-index: 0;
+    transition: 0.4s;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.project-box:hover {
+    transform: translateY(-15px); /* Lift up the project box by 10px when hovered */
+}
+
+.project-box:hover::after {
+    bottom: 0;
+}
+
+.project-box:hover > i,
+.project-box:hover > h3,
+.project-box:hover > label {
+    color: transparent;
+    z-index: 2;
+}
+
+.project-box:hover p {
+    color: #fff;
+    z-index: 10;
+    position: absolute;
+    transform: translateY(-5px);
+}
+
+
 
 .project-img{
+height :60%;
+border-radius: 30px;
+}
+
+
+
+
+/*================== CONTACT================================ */
+
+
+/*================== CONTACT================================ */
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left i {
+    color: #7A316F;
+    font-size: 30px;
+    margin-right: 15px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.contact-icons a {
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-right: 15px;
+    font-size: 30px;
+    display: inline-block;
+    transition: transform 0.5s; /* Added transition for hover effect */
+}
+
+.contact-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.contact-right form {
     width: 100%;
-    border-radius: 10px;
-    display: block;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 6px;
+    background: #727880;
+    color: white;
+    margin: 15px 0px;
+    font-size: 18px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: white;
 }
