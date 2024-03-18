@@ -163,7 +163,11 @@ header {
     width: 90%;
     margin-right: 5%;
     padding: 5%;
+    display: flex;
+    flex-direction:column ;
 }
+
+
 
 .about-content h1{
     font-size: 40px;
@@ -171,14 +175,29 @@ header {
     color: #7A316F;
     padding-left: 30%;
     margin: bottom 10px ;
+
+}
+
+.detail{
+    margin-top: 20px;
+    display: flex;
+    align-items: baseline;
+
 }
 
 .label {
-    color: #7A316F; /* Color for labels */
+    color: #7A316F;
+    font-size: large; /* Color for labels */
+    margin-right: 10px;
+}
+
+.label i{
+    margin-right: 10px;
 }
 
 .value {
-    color:aliceblue; /* Color for values */
+    color:aliceblue;
+    font-size: large;/* Color for values */
 }
 
 /*================================== PROJECt======================T */
@@ -188,6 +207,16 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
+.top-header{
+    color: #7A316F;
+    display: block;
+    font-size: 25px;
+    margin-left: 50%;
+    
+}
+
+
 
 .project-container{
     margin-top: 75PX;
@@ -210,7 +239,7 @@ header {
     width: 90%;
     height: 600px;
     background: transparent;
-    border: 2px solid #fff;
+    border: 4px solid #fff;
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow);
     overflow: hidden;
@@ -235,13 +264,13 @@ header {
 }
 
 .project-box::after {
-    content: "";
+    /* content: "";
     position: absolute;
     bottom: -100%;
     background: #461959;
     width: 100%;
     height: 100%;
-    z-index: 0.1;
+    z-index: 0.1; */
     transition: transform 0.5s ease; /* Added transition for smooth animation */
 }
 
@@ -266,14 +295,13 @@ header {
 .project-box:hover > i,
 .project-box:hover > h3,
 .project-box:hover > label {
-    color: transparent;
     z-index: 2;
 }
 
 .project-box:hover p {
     color: #fff;
     z-index: 10;
-    position: absolute;
+    position: relative;
     transform: translateY(-5px);
 }
 
