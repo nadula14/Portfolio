@@ -83,7 +83,8 @@ header {
     padding-right: 250px;
 }
 
-.home-content .btn-box{
+.home-content .btn-box
+{
     justify-content: space-between;
     display: flex;
     width: 350px;
@@ -214,7 +215,7 @@ header {
 .top-header{
     color: #7A316F;
     display: block;
-    font-size: 30px;
+    font-size:30px;
     margin-left: 50%;
     padding-top: 80px;
 
@@ -275,6 +276,7 @@ header {
 
 .project-box label a{
     display: inline-flex;
+    padding: 5px;
 }
 
 .project-box label i{
@@ -309,7 +311,7 @@ header {
     z-index: 0;
     transition: 0.4s;
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     padding: 0 20px;
 }
@@ -353,9 +355,10 @@ margin-top: 0;
 /*================== CONTACT================================ */
 
 .contact {
-    height: 60vh;
-    margin-top: 110px; /* Add margin to create space between header and section */
-    padding-top: 110px; /* Add padding to maintain content spacing */
+    height: 100vh;
+    margin-top: 90px; /* Add margin to create space between header and section */
+    padding-top: 90px; /* Add padding to maintain content spacing */
+    margin-bottom: 200px;
 }
 
 
@@ -379,7 +382,7 @@ margin-top: 0;
 
 .contact-left {
     flex-basis: 30%;
-    padding-left: 10%;
+    padding-left: 8%;
     padding-top: 0px;
     
    
@@ -401,7 +404,8 @@ margin-top: 0;
     overflow: hidden;
     cursor: pointer;
     margin-bottom: 30px;
-    transition: transform 0.5s ease
+    transition: transform 0.5s easel;
+    padding-right: 8%;
     
 
     
@@ -455,4 +459,24 @@ form textarea {
 form input::placeholder,
 form textarea::placeholder {
     color: white;
+}
+
+.contact-right button{
+
+    width: 20%;
+    padding: 15px;
+    border: 0;
+    border-radius: 6px;
+    background: #7A316F;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-right button:hover{
+    background: #252B48;
+    color:#7A316F;
+    border-radius: 7px;
+    border: #7A316F;
 }
